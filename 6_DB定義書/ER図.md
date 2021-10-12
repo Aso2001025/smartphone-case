@@ -20,6 +20,7 @@ package "ECサイト" as target_system {
         --
         pass
         name
+        nickname
         address
         tel
         mail
