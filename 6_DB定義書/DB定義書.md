@@ -31,6 +31,7 @@
 |---|-----|--|--|--|--|
 |顧客コード|customer_code|varchar(50)|○|○||
 |パスワード|pass|varchar(50)||○||
+|ニックネーム|nickname|varchar(50)||○||
 |氏名|name|varchar(20)||○||
 |住所|address|varchar(100)||○||
 |電話番号|tel|varchar(20)||○||
@@ -87,7 +88,7 @@
 
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
-|カテゴリコード|category_code|int(11)|○|○||
+|カテゴリコード|category_code|varchar(50)|○|○||
 |カテゴリ名|category_name|varchar(20)||○||
 |登録日|reg_date|date||○||
 
