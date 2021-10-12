@@ -26,6 +26,7 @@
 |customer_code|varchar(50)|○|○||
 |pass|varchar(50)||○||
 |name|varchar(20)||○||
+|nickname|varchar(20)||○||
 |address|varchar(100)||○||
 |tel|varchar(20)||○||
 |mail|varchar(100)||○||
@@ -81,7 +82,7 @@
 
 |項目名|型|PK|NN|FK|
 |-----|--|--|--|--|
-|category_code|int(11)|○|○||
+|category_code|varchar(50)|○|○||
 |category_name|varchar(20)||○||
 |reg_date|date||○||
 
