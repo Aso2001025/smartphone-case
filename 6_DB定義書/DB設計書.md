@@ -15,7 +15,7 @@
 |-----|--|--|--|--|
 |detail_id|bigint(20)|○|○||
 |order_id|bigint(20)|○|○|○|
-|design_code|int(11)||○|○|
+|design_code|bigint(20)||○|○|
 |price|int(11)||○||
 |num|int(11)||○||
 
@@ -38,7 +38,7 @@
 
 |項目名|型|PK|NN|FK|
 |-----|--|--|--|--|
-|design_id|bugint(11)|○|○||
+|design_code|bugint(11)|○|○||
 |design_name|varchar(50)||○||
 |customer_code|varchar(50)||○|○|
 |model_code|varchar(50)||○|○|
@@ -51,8 +51,8 @@
 
 |項目名|型|PK|NN|FK|
 |-----|--|--|--|--|
-|detail_id|bigint(20)|○|○||
-|design_id|bigint(20)|○|○|○|
+|design_detail_code|bigint(20)|○|○||
+|design_code|bigint(20)|○|○|○|
 |material_code|int(11)|||○|
 |image_code|int(11)|||○|
 
