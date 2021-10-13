@@ -38,11 +38,12 @@
 
 |項目名|型|PK|NN|FK|
 |-----|--|--|--|--|
-|design_code|int(11)|○|○||
+|design_id|bugint(11)|○|○||
 |design_name|varchar(50)||○||
 |customer_code|varchar(50)||○|○|
 |model_code|varchar(50)||○|○|
-|design_image|image||○||
+|type_code|varchar(50)||○|○|
+|design_image|varchar(500)||○||
 |release_flag|char(1)||||
 |reg_date|date||○||
 
@@ -51,7 +52,7 @@
 |項目名|型|PK|NN|FK|
 |-----|--|--|--|--|
 |detail_id|bigint(20)|○|○||
-|order_code|bigint(20)|○|○|○|
+|design_id|bigint(20)|○|○|○|
 |material_code|int(11)|||○|
 |image_code|int(11)|||○|
 
@@ -62,7 +63,7 @@
 |-----|--|--|--|--|
 |image_code|int(11)|○|○||
 |customer_code|varchar(50)|○|○|○|
-|image_data|image||○||
+|image_data|varchar(500)||○||
 |image_name|varchar(50)||○||
 |del_flag|int(11)||||
 |reg_date|date||○||
@@ -93,3 +94,10 @@
 |model_code|varchar(50)|○|○||
 |model_name|varchar(50)||○||
 |reg_date|date||○||
+
+## m_type
+
+|項目名|型|PK|NN|FK|
+|-----|--|--|--|--|
+|type_code|varchar(50)|○|○||
+|price|int(11)||○||
