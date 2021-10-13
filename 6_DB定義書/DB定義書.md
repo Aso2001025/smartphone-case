@@ -45,10 +45,11 @@
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
 |デザインコード|design_code|int(11)|○|○||
-|デザイン名|design_name|varchar(50)||○||
+|デザイン名|design_name|varchar(50)||||
 |顧客コード|customer_code|varchar(50)||○|○|
 |機種コード|model_code|varchar(50)||○|○|
-|デザイン画像|design_image|image||○||
+|タイプコード|type_code|varchar(50)||○|○|
+|デザイン画像|design_image|varchar(500)||○||
 |公開フラグ|release_flag|char(1)||||
 |登録日|reg_date|date||○||
 
@@ -57,7 +58,7 @@
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
 |デザイン詳細コード|detail_id|bigint(20)|○|○||
-|デザインコード|order_code|bigint(20)|○|○|○|
+|デザインコード|design_id|bigint(20)|○|○|○|
 |素材コード|material_code|int(11)|||○|
 |画像コード|image_code|int(11)|||○|
 
@@ -68,7 +69,7 @@
 |---|-----|--|--|--|--|
 |画像コード|image_code|int(11)|○|○||
 |顧客コード|customer_code|varchar(50)|○|○|○|
-|画像|image_data|image||○||
+|画像|image_data|varchar(500)||○||
 |画像名|image_name|varchar(50)||○||
 |削除フラグ|del_flag|int(11)||||
 |登録日|reg_date|date||○||
@@ -99,3 +100,10 @@
 |機種コード|model_code|varchar(50)|○|○||
 |モデル名|model_name|varchar(50)||○||
 |登録日|reg_date|date||○||
+
+## タイプマスタ(m_type)
+
+|和名|属性名(カラム名)|型|PK|NN|FK|
+|---|-----|--|--|--|--|
+|タイプコード|type_code|varchar(50)|○|○||
+|価格|price|int(11)||○||
