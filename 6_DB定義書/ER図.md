@@ -97,6 +97,12 @@ package "ECサイト" as target_system {
         model_name
         reg_date
     }
+    
+    entity "タイプマスタ" as type <m_type> <<M,MASTER_MARK_COLOR>> {
+        + type_code [PK]
+        --
+       price
+    }
   }
   
 customer       |o-u-o{     order
@@ -105,6 +111,7 @@ order          ||-r-|{     order_detail
 order_detail   }-d-||     design
 design         }o-l-||    customer
 design         }o-r-o{     model
+design         }o-r-o{     type
 design         }o-d-o{     design_detail
 design_detail  }o-r-o{     image
 design_detail  }o-d-o{     material
