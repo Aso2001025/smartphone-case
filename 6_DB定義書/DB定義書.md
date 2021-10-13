@@ -21,7 +21,7 @@
 |---|-----|--|--|--|--|
 |オーダー詳細ID|detail_id|bigint(20)|○|○||
 |オーダーID|order_id|bigint(20)|○|○|○|
-|デザインコード|design_code|int(11)||○|○|
+|デザインコード|design_code|bigint(20)||○|○|
 |価格|price|int(11)||○||
 |数量|num|int(11)||○||
 
@@ -57,8 +57,8 @@
 
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
-|デザイン詳細コード|detail_id|bigint(20)|○|○||
-|デザインコード|design_id|bigint(20)|○|○|○|
+|デザイン詳細コード|design_detail_code|bigint(20)|○|○||
+|デザインコード|design_code|bigint(20)|○|○|○|
 |素材コード|material_code|int(11)|||○|
 |画像コード|image_code|int(11)|||○|
 
