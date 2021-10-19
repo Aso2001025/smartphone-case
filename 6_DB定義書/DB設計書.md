@@ -55,7 +55,11 @@
 |design_code|bigint(20)|○|○|○|
 |material_code|int(11)|||○|
 |image_code|int(11)|||○|
-
+|x_postion|int(5)||○a||
+|y_postion|int(5)||○||
+|z_postion|int(5)||○||
+|height|int(5)||○||
+|weight|int(5)||○||
 
 ## d_image
 
@@ -100,4 +104,13 @@
 |項目名|型|PK|NN|FK|
 |-----|--|--|--|--|
 |type_code|varchar(50)|○|○||
+|type_name|varchar(50)||○||
 |price|int(11)||○||
+
+## m_font
+
+|項目名|型|PK|NN|FK|
+|-----|--|--|--|--|
+|font_code|varchar(50)|○|○||
+|font_name|varchar(50)||○||
+
