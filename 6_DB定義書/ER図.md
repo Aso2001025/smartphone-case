@@ -61,6 +61,12 @@ package "ECサイト" as target_system {
         --
         # material_code [FK]
         # image_code [FK]
+        # font_code [FK]
+        x_postion
+        y_postion
+        z_postion
+        height
+        weigth
         
     }
     
@@ -101,7 +107,14 @@ package "ECサイト" as target_system {
     entity "タイプマスタ" as type <m_type> <<M,MASTER_MARK_COLOR>> {
         + type_code [PK]
         --
+        type_name
        price
+    }
+    
+    entity "フォントマスタ" as font <m_font> <<M,MASTER_MARK_COLOR>> {
+        + font_code [PK]
+        --
+       font_name
     }
   }
   
@@ -112,6 +125,7 @@ order_detail   }-d-||     design
 design         }o-l-||    customer
 design         }o-r-o{     model
 design         }o-r-o{     type
+design         }o-r-o{     font
 design         }o-d-o{     design_detail
 design_detail  }o-r-o{     image
 design_detail  }o-d-o{     material
