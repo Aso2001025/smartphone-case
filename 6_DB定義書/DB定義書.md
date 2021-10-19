@@ -61,7 +61,12 @@
 |デザインコード|design_code|bigint(20)|○|○|○|
 |素材コード|material_code|int(11)|||○|
 |画像コード|image_code|int(11)|||○|
-
+|フォントコード|font_code|int(11)|||○|
+|X座標|x_postion|int(5)||○||
+|Y座標|y_postion|int(5)||○||
+|Z座標|z_postion|int(5)||○||
+|縦|heigth|int(5)||○||
+|横|weigth|int(5)||○||
 
 ## ユーザ登録画像テーブル(d_image)
 
@@ -106,4 +111,12 @@
 |和名|属性名(カラム名)|型|PK|NN|FK|
 |---|-----|--|--|--|--|
 |タイプコード|type_code|varchar(50)|○|○||
+|タイプ名|type_name|varchar(50)||○||
 |価格|price|int(11)||○||
+
+## フォントマスタ(m_font)
+
+|和名|属性名(カラム名)|型|PK|NN|FK|
+|---|-----|--|--|--|--|
+|フォントコード|font_code|varchar(50)|○|○||
+|フォント名|type_name|varchar(50)||○||
