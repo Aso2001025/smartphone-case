@@ -3,7 +3,7 @@ document.write('<div class="header"><!DOCTYPE html>\n' +
     '<head>\n' +
     '    <meta charset="UTF-8">\n' +
     '    <title>SmartphooneCase</title>\n' +
-    '    <link rel="stylesheet" href="css/header.css">\n' +
+    '    <link rel="stylesheet" href="../css/header.css">\n' +
     '    <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>\n' +
     '</head>\n' +
     '<body>\n' +
@@ -50,5 +50,4 @@ document.write('<div class="header"><!DOCTYPE html>\n' +
     '    </div>\n' +
     '\n' +
     '</header>\n' +
-    '</body>\n' +
     '</html></div>');
