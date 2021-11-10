@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,7 +10,8 @@
 <header>
     <script src="header.js"></script>
 </header>
-<a href="mypage.php" name="Mypage">My page</a>
+<?php require 'header.php';?>
+<h1>My page</h1>
 <p>--------------------------------------------------</p>
 <?php
 $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan; 
@@ -17,10 +19,11 @@ $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan;
 dbname=LAA1290607-smartphone;charst=UTF8',
     'LAA1290607',
     'Pass2525');
-$sql=$pdo->query('select image from m_customers where customer_code="C00000001"');
+$sql=$pdo->prepare('select image from m_customers where customer_code=?');
+$sql->execute([$_SESSION['user']['name']]);
 foreach ($sql as $row){
     $img= $row['image'];
-    echo '<img src="$img">';
+    echo '<img src="',$img,'"><br>';
 }
 
 
@@ -29,6 +32,6 @@ foreach ($sql as $row){
 <a href="user%20information.php"><ユーザ情報編集></a><br>
 <a href="change%20of%20address.php"><宛先住所変更></a><br>
 <a href="Change%20payment%20method.php"><支払い方法編集></a><br>
-<a href="Logout.php"><ログアウト></a><br>
+<a href="logout.php"><ログアウト></a><br>
 </body>
 </html>

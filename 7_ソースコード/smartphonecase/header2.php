@@ -15,22 +15,7 @@
         <div class="menu-content">
             <ul>
                 <li>
-                    <a href="mypage.php">会員情報</a>
-                </li>
-                <li>
-                    <a href="#">保存デザイン一覧</a>
-                </li>
-                <li>
-                    <a href="#">デザインを探す</a>
-                </li>
-                <li>
-                    <a href="cart.php">カート</a>
-                </li>
-                <li>
-                    <a href="#">注文履歴</a>
-                </li>
-                <li>
-                    <a href="logout.php">ログアウト</a>
+                    <a href="login.php">ログイン</a>
                 </li>
             </ul>
         </div>
