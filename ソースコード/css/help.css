@@ -1,0 +1,30 @@
+h2{
+    font-size: 30px;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kakugo Pro W3",
+    Verdana, Helvetica, "ＭＳ Ｐゴシック",
+    "MS P Gothic", "メイリオ", "Meiryo",
+    Osaka, sans-serif;
+
+}
+body p{
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kakugo Pro W3",
+    Verdana, Helvetica, "ＭＳ Ｐゴシック",
+    "MS P Gothic", "メイリオ", "Meiryo",
+    Osaka, sans-serif;
+    font-size: 20px;
+}
+body a{
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kakugo Pro W3",
+    Verdana, Helvetica, "ＭＳ Ｐゴシック",
+    "MS P Gothic", "メイリオ", "Meiryo",
+    Osaka, sans-serif;
+    font-family: "BIZ UDPゴシック";
+
+}
+
+body li{
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kakugo Pro W3",
+    Verdana, Helvetica, "ＭＳ Ｐゴシック",
+    "MS P Gothic", "メイリオ", "Meiryo",
+    Osaka, sans-serif;
+}
