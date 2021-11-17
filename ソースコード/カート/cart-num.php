@@ -15,19 +15,25 @@ session_start();
 $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan; 
         dbname=LAA1290607-smartphone;charst=UTF8',
     'LAA1290607', 'Pass2525');
+//数量を取得
 $num = $_POST['num'];
 
 if(isset($_POST['plus'])){
+    //数量を増やす
     $num=$num+1;
 }else if(isset($_POST['minus'])){
+    //数量を減らす
     $num=$num-1;
+    //マイナスにならないようにする
     if($num<0){
         $num=0;
     }
 }
+//DBを更新
 $spl = $pdo->prepare('update d_cart set num=? where customer_code=? and design_code=?');
 $spl->execute([$num,$_SESSION['name'],$_POST['design']]);
 $pdo=null;
+//元の画面へ遷移
 echo '<META http-equiv="Refresh" content="0.01;URL=cart.php">';
 
 ?>

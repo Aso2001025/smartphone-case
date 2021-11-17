@@ -15,10 +15,12 @@ session_start();
 $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan; 
         dbname=LAA1290607-smartphone;charst=UTF8',
     'LAA1290607', 'Pass2525');
-
+//カートから削除するSQL
 $spl = $pdo->prepare('update d_cart set del_flag=1 where customer_code=? and design_code=?');
+//顧客番号、デザインコードを代入
 $spl->execute([$_SESSION['name'],$_POST['design']]);
 $pdo=null;
+//元の画面へ遷移
 echo '<META http-equiv="Refresh" content="0.01;URL=cart.php">';
 
 ?>
