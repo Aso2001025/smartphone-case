@@ -5,6 +5,7 @@
     <title>SmartphooneCase help</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 

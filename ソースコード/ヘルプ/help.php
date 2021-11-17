@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <title>SmartphooneCase help</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/help.css">
 </head>
 <body>
-
+<main>
     <h2>ヘルプページ</h2>
     <p>to creatc cese</p>
     <a href="help_cese.php">ケースの作り方</a>
@@ -27,7 +28,7 @@
     address:<input type="text"name="name">name:<input type="text" name="name"><br>
     <input type="text" name="form" style="width: 420px; height: 40px;">
     <input type="submit" name="送信">
-
+</main>
 
     </body>
     </html>

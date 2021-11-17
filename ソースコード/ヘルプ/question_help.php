@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/help.css">
 </head>
 <body>
-
+<main>
     <h1>よくある質問</h1>
     <h2>Q:発送先を変更したいのですが？</h2>
     <h3>A:商品をお選びいただいた後の、ご注文情報の入力時にお届け先の情報入力項目がございます。
@@ -30,8 +30,8 @@
 
     <a href="help.php">ヘルプページ戻る</a>
 
+</main>
 
 
-
-    </body>
-    </html>
+</body>
+</html>

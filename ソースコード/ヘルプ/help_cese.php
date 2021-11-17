@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <title>SmartphooneCase help</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/help.css">
 </head>
 <body>
+<main>
     <h1>ケースの作り方</h1>
 <h2>Step1:トップページに行き、上の「スタート」をクリック</h2>
 <!-- トップページのスクショを張る-->
@@ -25,6 +27,7 @@
 <h2>Step3:保存ページに飛び、スマホケースを選択し、購入ができる</h2>
 <!-- 保存ページのスクショ -->
 <img scr="">
+</main>
 
 
 
