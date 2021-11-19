@@ -116,10 +116,29 @@ package "ECサイト" as target_system {
         --
        font_name
     }
+    
+    entity "カートテーブル" as font <m_cartt> <<M,MASTER_MARK_COLOR>> {
+        + design_code [PK][FK]
+        + customer_code [PK][FK]
+        --
+       price
+       num
+       del_flag
+       reg_date
+    }
+    
+    entity "クレジットテーブル" as  <d_credit> <<M,MASTER_MARK_COLOR>> {
+        + pay_code [PK]
+        --
+       customer_code [FK]
+       card_number
+    }
   }
   
 customer       |o-u-o{     order
 customer       }-d-o{     image
+customer       }--o{     cart
+customer       }-l-o{     credit
 order          ||-r-|{     order_detail
 order_detail   }-d-||     design
 design         }o-l-||    customer
@@ -127,6 +146,7 @@ design         }o-r-o{     model
 design         }o-r-o{     type
 design         }o-r-o{     font
 design         }o-d-o{     design_detail
+design         }o-d-o{      cart
 design_detail  }o-r-o{     image
 design_detail  }o-d-o{     material
 material       }o-r-||    category
