@@ -125,7 +125,7 @@ num|int(11)||○||
 del_flag|char(1)||||
 reg_date|date||○||
 
-## m_font
+## d_credit
 
 |項目名|型|PK|NN|FK|
 |-----|--|--|--|--|
