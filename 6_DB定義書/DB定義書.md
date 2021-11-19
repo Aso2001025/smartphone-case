@@ -120,3 +120,23 @@
 |---|-----|--|--|--|--|
 |フォントコード|font_code|varchar(50)|○|○||
 |フォント名|type_name|varchar(50)||○||
+
+
+## カートテーブル(d_cart)
+
+|和名|属性名(カラム名)|型|PK|NN|FK|
+|---|-----|--|--|--|--|
+|デザインコード|design_code|bigint(20)|○|○|○|
+|カスタマーコード|customer_code|varchar(50)|○|○|○|
+|価格|price|int(11)||○||
+|数量|num|int(11)||○||
+|削除フラグ|del_flag|char(1)||||
+|登録日|reg_date|date||○||
+
+## クレジットマスタ(m_font)
+
+|和名|属性名(カラム名)|型|PK|NN|FK|
+|---|-----|--|--|--|--|
+|クレジットコード|pay_code|bigint(20)|○|○||
+|カスタマーコード|customer_code|varchar(50)||○|○|
+|カード番号|card_number|bigint(16)||○||
