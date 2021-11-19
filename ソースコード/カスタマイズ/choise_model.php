@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/choise_main.css">
+    <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+</head>
+<body>
+<?php require 'header.php';?>
+<main>
+        <h1>機種を選択</h1>
+    <form action="Customize.php" method="post">
+        <button type="submit" name="model_name" value="iPhone 13 Pro" >iPhone13Pro</button>
+        <button type="submit" name="model_name" value="iPhone 13 Pro Max" >iPhone13ProMax</button>
+        <button type="submit" name="model_name" value="iPhone 13 mini" >iPhone13mini</button>
+        <button type="submit" name="model_name" value="iPhone 13" >iPhone13</button>
+        <button type="submit" name="model_name" value="iPhone 12 Pro" >iPhone12Pro</button>
+        <button type="submit" name="model_name" value="iPhone 12 Pro Max">iPhone12ProMax</button>
+        <button type="submit" name="model_name" value="iPhone 12 mini" >iPhone12mini</button>
+        <button type="submit" name="model_name" value="iPhone 12">iPhone12</button>
+        <button type="submit" name="model_name" value="iPhone 11 Pro" >iPhone11Pro</button>
+        <button type="submit" name="model_name" value="iPhone 11 Pro Max" >iPhone11ProMax</button>
+        <button type="submit" name="model_name" value="iPhone 11" >iPhone13Pro</button>
+        <button type="submit" name="model_name" value="iPhone SE（第2世代）" >iPhoneSE（第2世代）</button>
+    </form>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>
