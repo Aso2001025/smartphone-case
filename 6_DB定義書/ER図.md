@@ -127,7 +127,7 @@ package "ECサイト" as target_system {
        reg_date
     }
     
-    entity "クレジットテーブル" as  <d_credit> <<M,MASTER_MARK_COLOR>> {
+    entity "クレジットテーブル" as  credit <d_credit> <<M,MASTER_MARK_COLOR>> {
         + pay_code [PK]
         --
        customer_code [FK]
