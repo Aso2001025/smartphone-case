@@ -117,7 +117,7 @@ package "ECサイト" as target_system {
        font_name
     }
     
-    entity "カートテーブル" as font <m_cartt> <<M,MASTER_MARK_COLOR>> {
+    entity "カートテーブル" as cart <m_cart> <<M,MASTER_MARK_COLOR>> {
         + design_code [PK][FK]
         + customer_code [PK][FK]
         --
