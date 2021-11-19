@@ -114,3 +114,22 @@
 |font_code|varchar(50)|○|○||
 |font_name|varchar(50)||○||
 
+## d_cart
+
+|項目名|型|PK|NN|FK|
+|-----|--|--|--|--|
+design_code|bigint(20)|○|○|○|
+customer_code|varchar(50)|○|○|○|
+price|int(11)||○||
+num|int(11)||○||
+del_flag|char(1)||||
+reg_date|date||○||
+
+## m_font
+
+|項目名|型|PK|NN|FK|
+|-----|--|--|--|--|
+pay_code|bigint(20)|○|○||
+customer_code|varchar(50)||○|○|
+card_number|bigint(16)||○||
+
