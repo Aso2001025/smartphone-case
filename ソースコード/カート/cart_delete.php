@@ -18,7 +18,8 @@ $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan;
 //カートから削除するSQL
 $spl = $pdo->prepare('update d_cart set del_flag=1 where customer_code=? and design_code=?');
 //顧客番号、デザインコードを代入
-$spl->execute([$_SESSION['name'],$_POST['design']]);
+echo $_POST['design_code'];
+$spl->execute([$_SESSION['name'],$_POST['design_code']]);
 $pdo=null;
 //元の画面へ遷移
 echo '<META http-equiv="Refresh" content="0.01;URL=cart.php">';
