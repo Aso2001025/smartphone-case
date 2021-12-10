@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="ja">
 <head>
@@ -23,7 +24,7 @@ if(isset($_SESSION['name'])){
 <main>
     <div class="center">
         <p>
-            <a href="http://aso2001017.babyblue.jp/smartphonecase/choise_model.html">世界に一つだけ。自分だけのスマホケースを作ろう→START</a>
+            <a href="choise_model.php">世界に一つだけ。自分だけのスマホケースを作ろう→START</a>
         </p>
     </div>
     <div class="phone"><img src="img/group 6.png" alt="phone"></div>

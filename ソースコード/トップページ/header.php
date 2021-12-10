@@ -2,7 +2,7 @@
 <header>
     <div id="relative"></div>
     <!-- トップページの名前兼トップページ遷移リンク -->
-    <h1 class="title"><a href="index.php">自分だけのスマートフォンケース</a></h1><!--
+    <h1 class="title"><a href="toppage.php">自分だけのスマートフォンケース</a></h1><!--
  画像にしたいときはimgタグここに--></a>
 
     <!-- ヘルプページリンク -->
@@ -29,7 +29,7 @@
                     <a href="cart.php">カート</a>
                 </li>
                 <li>
-                    <a href="#">注文履歴</a>
+                    <a href="Purchase_history.php">注文履歴</a>
                 </li>
                 <li>
                     <a href="logout.php">ログアウト</a>
