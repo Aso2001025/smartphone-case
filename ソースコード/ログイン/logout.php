@@ -15,7 +15,7 @@ session_start();
 unset($_SESSION['user']);
 session_destroy();
 //トップページへ遷移
-echo '<META http-equiv="Refresh" content="0.01;URL=index.php">';
+echo '<META http-equiv="Refresh" content="0.01;URL=toppage.php">';
 ?>
 </body>
 </head>
