@@ -13,7 +13,10 @@ session_start();
 </head>
 <body>
 
-<?php require 'header.php'; ?>
+<?php require 'header.php';
+if(!isset($_SESSION['name'])) {
+    echo '<META http-equiv="Refresh" content="0.01;URL=toppage.php">';
+}?>
 <main>
 <h1>My Design</h1>
 
@@ -29,7 +32,7 @@ $sql->execute([$_SESSION['name']]);
 echo '<div name="content">';
 foreach($sql as $item){
     echo '<div name="item">';
-    echo '<form action="syosai.php" method="post">';
+    echo '<form action="syousai.php" method="post">';
     echo '<input type="hidden" name="design" value="',$item['design_code'],'" >';
     echo '<input type="image" src="',$item['design_image'],'" alt="送信する">';
     echo '<p>',$item['design_name'],'</p>';
