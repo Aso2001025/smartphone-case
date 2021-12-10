@@ -9,7 +9,10 @@
 </head>
 <body>
 
-<?php require 'header.php';?>
+<?php require 'header.php';
+if(!isset($_SESSION['name'])) {
+    echo '<META http-equiv="Refresh" content="0.01;URL=toppage.php">';
+}?>
 <main>
     <h1>My page</h1>
     <p>--------------------------------------------------</p>
@@ -31,9 +34,9 @@
 
     ?>
     <!--    各変更画面へ遷移-->
-    <a href="user%20information.php"><ユーザ情報編集></a><br>
-    <a href="change%20of%20address.php"><宛先住所変更></a><br>
-    <a href="Change%20payment%20method.php"><支払い方法編集></a><br>
+    <a href="user_information.php"><ユーザ情報編集></a><br>
+    <a href="editAddress-in.php"><宛先住所変更></a><br>
+    <a href="paymethod.php"><支払い方法編集></a><br>
     <a href="logout.php"><ログアウト></a><br>
 </main>
 </body>
