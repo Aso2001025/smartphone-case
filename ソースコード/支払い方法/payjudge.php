@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <!--あとでcssで整える-->
-<h1>支払い方法追加結果画面</h1>
 <?php require 'header.php'?>
+<main>
+<h1>支払い方法追加画面</h1>
 <?php
 $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan;
 dbname=LAA1290607-smartphone;charset=UTF8',
@@ -22,5 +25,6 @@ $sql->execute();
 echo '追加しました<br>';
 echo '<META http-equiv="Refresh" content="10;URL=paymethod.php">';
 ?>
+</main>
 </body>
 </html>
