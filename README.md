@@ -19,4 +19,4 @@
    
    http://aso2001025.chips.jp/smartphone/syousai.php
    
-
+副島感想:あまりにも実力不足でした。
