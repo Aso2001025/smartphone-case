@@ -1,0 +1,4 @@
+<h1> -> <h2>
+imgタグ id -> class="image"
+入力へ戻るリンク　class="back-form"追加
+もしかしたら住所が白背景からはみ出すかも
