@@ -1,5 +1,4 @@
 squareをmainに変更
-id="image"をimgに変更
 h1タグをh2タグに変更
 selectの部分にdivを追加
 a(支払方法変更、住所変更)にクラスを追加　change-payment,change-address
