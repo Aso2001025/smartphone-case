@@ -16,4 +16,7 @@
    ほかの人のカスタム例を閲覧できる機能を実装する<br>
    わかりやすいようにユーザーガイドのページを作る<br>
    
+   
+   http://aso2001025.chips.jp/smartphone/syousai.php
+   
 
