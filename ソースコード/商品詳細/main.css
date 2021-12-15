@@ -1,0 +1,39 @@
+body{
+    padding-top: 65px;
+    background-color: lightcyan;
+}
+
+.square {
+    width: 800px;
+    height: 475px;
+    background: white;
+    position: absolute;
+    left: 20%;
+}
+
+.image{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+
+h2{
+    position: absolute;
+    left: 55%;
+    top: 25%;
+}
+
+p{
+    font-size: 18px;
+    position:relative;
+    left:55%;
+    top: 150px;
+}
+button{
+    position: absolute;
+    left: 55%;
+    top:75%
+}
+
+
+
