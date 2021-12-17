@@ -2,7 +2,8 @@
 <header>
     <div id="relative"></div>
     <!-- トップページの名前兼トップページ遷移リンク -->
-    <h1 class="title"><a href="toppage.php">自分だけのスマートフォンケース</a></h1><!--
+    <h1 class="title"><a href="toppage.php">original smartphone
+            Case</a></h1><!--
  画像にしたいときはimgタグここに--></a>
 
     <!-- ヘルプページリンク -->
@@ -20,7 +21,7 @@
                     <a href="mypage.php">会員情報</a>
                 </li>
                 <li>
-                    <a href="mydesign.php">My Design</a>
+                    <a href="mydesign.php">マイデザイン</a>
                 </li>
                 <li>
                     <a href="another_design.php">デザインを探す</a>
