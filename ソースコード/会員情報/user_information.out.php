@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>My page</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/infometion.css">
 </head>
 <body>
 <?php require 'header.php';
@@ -12,6 +13,7 @@ if(!isset($_SESSION['name'])) {
     echo '<META http-equiv="Refresh" content="0.01;URL=toppage.php">';
 }?>
 <main>
+    <div class="bg-color">
 <form action="user%20information.php">
 
     <?php
@@ -63,12 +65,11 @@ if(!isset($_SESSION['name'])) {
 
 
 //画像をデータべースに入れる
+        $date = date("y-m-d");
         $files = basename($_FILES['user_image']['name']);
-        $sql = $pdo->prepare('INSERT INTO d_image(customer_code,image_name) VALUE(?,?)');
+        $sql = $pdo->prepare('INSERT INTO d_image VALUE("",?,?,?,"",?)');
 
-        $sql->bindValue(1, $_SESSION['name'], PDO::PARAM_STR);
-        $sql->bindValue(2, $files, PDO::PARAM_STR);
-        $sql->execute();
+        $sql->execute([$_SESSION['name'],$files,$file,$date]);
 
 
 //ユーザ名、メール、パスワードの変更しデータベースに反映させるSQL
@@ -103,8 +104,9 @@ $pdo=null;
 
 
 ?>
-    <a href="mypage.php">My pageに戻る</a>
+    <a href="mypage.php">マイページに戻る</a>
 </form>
+    </div>
 </main>
 </body>
 </html>

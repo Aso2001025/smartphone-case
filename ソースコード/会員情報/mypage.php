@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>My page</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mypage.css">
 </head>
 <body>
 
@@ -14,8 +14,7 @@ if(!isset($_SESSION['name'])) {
     echo '<META http-equiv="Refresh" content="0.01;URL=toppage.php">';
 }?>
 <main>
-    <h1>My page</h1>
-    <p>--------------------------------------------------</p>
+    <h1 class="userinformation">マイページ</h1>
     <?php
     $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan; 
         dbname=LAA1290607-smartphone;charst=UTF8',
@@ -28,16 +27,16 @@ if(!isset($_SESSION['name'])) {
     foreach ($sql as $row){
         $img= $row['image'];
         echo '<img src="',$img,'"><br>';
-        echo '<p>',$row['nickname'],'</p>';
+        echo '<p class="username">ようこそ <strong>',$row['nickname'],'</strong> さん</p>';
     }
 
 
     ?>
     <!--    各変更画面へ遷移-->
-    <a href="user_information.php"><ユーザ情報編集></a><br>
-    <a href="editAddress-in.php"><宛先住所変更></a><br>
-    <a href="paymethod.php"><支払い方法編集></a><br>
-    <a href="logout.php"><ログアウト></a><br>
+    <p><a href="user_information.php" class="btn">  ユーザ情報編集</a></p>
+    <p><a href="editAddress-in.php" class="btn">  宛先住所変更</a></p>
+    <p><a href="paymethod.php" class="btn">  支払い方法編集</a></p>
+    <p><a href="logout.php" class="btn">  ログアウト</a></p>
 </main>
 </body>
 </html>

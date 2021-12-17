@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <title>editAddress</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/infometion.css">
 </head>
 <body>
 <?php require 'header.php';
@@ -16,6 +16,7 @@ if(!isset($_SESSION['name'])) {
     echo '<META http-equiv="Refresh" content="0.01;URL=toppage.php">';
 }?>
 <main>
+    <div class="bg-color">
     <h2>住所変更</h2>
 
     <?php
@@ -29,13 +30,14 @@ if(!isset($_SESSION['name'])) {
 
     echo '<form action="editAddress-result.php" method="post">';
     foreach($sql as $item){
-        echo '<input type="text" name="address" value="',$item['address'],'">';
+        echo '<p><input type="text" name="address" value="',$item['address'],'"></p>';
     }
     echo '<button type="submit">更新</button>';
     echo '</form>';
 
     $pdo=null;
     ?>
+    </div>
 </main>
 </body>
 </html>
