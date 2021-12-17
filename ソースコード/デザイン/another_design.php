@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/anotherdesign_main.css">
     <title>Another Design</title>
 </head>
 <body>
@@ -21,7 +21,7 @@ if(!isset($_SESSION['name'])) {
 
 }
 <main>
-<h1>Another Design</h1>
+<h2>他のデザイン</h2>
 <form action="another_design.php" method="post">
 <?php
 $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan; 
@@ -48,22 +48,22 @@ if(isset($_POST['type'])&&$_POST['type']!=0){
 if(isset($_POST['text'])) {
     $text = $_POST['text'];
 }
-echo '<p>キーワード：<input type="text" name="text" value="',$text,'">';
+echo '<p>キーワード：<input type="text" name="text" value="',$text,'" placeholder="　キーワード入力">';
 
-echo 'モデル：<select name="model">';
+echo '  モデル：<select name="model">';
 echo '<option value="0"></option>';
 foreach ($pdo->query('select * from m_model order by model_name') as $item){
     echo '<option value="',$item['model_code'],'">',$item['model_name'],'</option>';
 }
 echo '</select>';
 
-echo 'ケースタイプ：<select name="type">';
+echo '  ケースタイプ：<select name="type">';
 echo '<option value="0"></option>';
 foreach ($pdo->query('select * from m_type order by type_name') as $item){
     echo '<option value="',$item['type_code'],'">',$item['type_name'],'</option>';
 }
 echo '</select>';
-echo '<button type="submit">検索</button></p>';
+echo '<button type="submit"> 検索</button></p>';
 echo '</form>';
 
 $sql;
@@ -82,7 +82,7 @@ if($type_flag && $model_flag){
                             where release_flag=0 and customer_code<>? and (design_code LIKE ? OR design_name LIKE ?)
                             and model_code=?');
     $sql->execute([$_SESSION['name'],'%'.$text.'%','%'.$text.'%',$model]);
-    echo $model;
+
 }else{
     $sql = $pdo->prepare('select design_code,design_image,design_name from d_design
                             where customer_code<>? and release_flag=0 and (design_code LIKE ? OR design_name LIKE ?)');
@@ -90,12 +90,12 @@ if($type_flag && $model_flag){
 }
 
 
-echo '<div name="content">';
+echo '<div class="content">';
 foreach($sql as $item){
-    echo '<div name="item">';
+    echo '<div class="item">';
     echo '<form action="syousai.php" method="post">';
     echo '<input type="hidden" name="design" value="',$item['design_code'],'" >';
-    echo '<input type="image" src="',$item['design_image'],'" alt="送信する">';
+    echo '<input type="image" class="item_image" src="',$item['design_image'],'" alt="送信する">';
     echo '<p>',$item['design_name'],'</p>';
     echo '</form>';
     echo '</div>';

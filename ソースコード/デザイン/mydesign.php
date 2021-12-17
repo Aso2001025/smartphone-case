@@ -8,8 +8,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>My Design</title>
+    <link rel="stylesheet" href="css/mydesign_main.css">
+    <title>マイデザイン</title>
 </head>
 <body>
 
@@ -18,7 +18,7 @@ if(!isset($_SESSION['name'])) {
     echo '<META http-equiv="Refresh" content="0.01;URL=toppage.php">';
 }?>
 <main>
-<h1>My Design</h1>
+<h2>マイデザイン</h2>
 
 <?php
 $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan; 
@@ -29,12 +29,12 @@ $pdo = new PDO('mysql:host=mysql153.phy.lolipop.lan;
 $sql = $pdo->prepare('select design_code,design_image,design_name from d_design
                             where customer_code=?');
 $sql->execute([$_SESSION['name']]);
-echo '<div name="content">';
+echo '<div class="content">';
 foreach($sql as $item){
-    echo '<div name="item">';
+    echo '<div class="item">';
     echo '<form action="syousai.php" method="post">';
     echo '<input type="hidden" name="design" value="',$item['design_code'],'" >';
-    echo '<input type="image" src="',$item['design_image'],'" alt="送信する">';
+    echo '<input type="image" class="item_image" src="',$item['design_image'],'" alt="送信する">';
     echo '<p>',$item['design_name'],'</p>';
     echo '</form>';
     echo '</div>';
