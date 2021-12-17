@@ -28,7 +28,7 @@
             $_SESSION['name']=$item['customer_code'];
         }
         //トップページに戻る
-        echo '<META http-equiv="Refresh" content="0.1;URL=index.php">';
+        echo '<META http-equiv="Refresh" content="0.1;URL=toppage.php">';
     }else{//失敗した場合
         echo '失敗<br>';
         echo 'もう一度入力し直して下さい';
